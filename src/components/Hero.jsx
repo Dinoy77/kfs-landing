@@ -8,7 +8,7 @@ export default function Hero() {
           <div style={styles.badge}>🔔 PGCET 2026 — LAST CALL!</div>
           <h1 style={styles.h1} className="hero-h1">
             Crack PGCET &<br />
-            <span style={styles.highlight}>Secure Your Dream</span><br />
+            <span style={styles.highlight}>Secure Your Drea</span><br />
             MBA College!
           </h1>
           <p style={styles.sub}>
