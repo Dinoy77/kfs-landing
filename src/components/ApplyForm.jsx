@@ -15,6 +15,27 @@ export default function ApplyForm() {
   const handleSubmit = () => {
     const e = validate();
     if (Object.keys(e).length) { setErrors(e); return; }
+
+    // Your WhatsApp number with country code (India = 91)
+    const phoneNumber = "918157096907";
+
+    // Message that will be sent
+    const message =
+      `🎓 *New PGCET 2026 Application*
+
+👤 *Name:* ${form.name}
+📞 *Phone:* ${form.phone}
+📧 *Email:* ${form.email || 'Not provided'}
+🏫 *College:* ${form.college || 'Not provided'}
+🏙️ *City:* ${form.city || 'Not provided'}
+
+_Sent from KFS Website_`;
+
+    // Encode and open WhatsApp
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, '_blank');
     setSubmitted(true);
   };
 
