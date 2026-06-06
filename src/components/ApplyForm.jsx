@@ -17,7 +17,7 @@ export default function ApplyForm() {
     if (Object.keys(e).length) { setErrors(e); return; }
 
     // Your WhatsApp number with country code (India = 91)
-    const phoneNumber = "91  9742261161";
+    const phoneNumber = "919742261161";
 
     // Message that will be sent
     const message =
